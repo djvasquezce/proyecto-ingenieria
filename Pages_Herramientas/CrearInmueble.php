@@ -18,5 +18,5 @@
 ?>
 <script type="text/javascript">
     alert("El inmueble se ha creado Exitosamente");
-    window.location.href='Crear.php';
+    window.location.href='VistaCrearInmueble.php';
 </script>

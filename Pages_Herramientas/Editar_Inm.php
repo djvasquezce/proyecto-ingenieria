@@ -18,5 +18,5 @@ $servername = "localhost";
 ?>
 <Script type="text/javascript">
     alert("Se ha editado exitosamente")
-    window.location.href="Editar_P.php";
+    window.location.href="VistaMostrarInmueble.php";
 </Script>
