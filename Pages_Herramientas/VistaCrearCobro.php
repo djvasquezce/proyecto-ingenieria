@@ -66,7 +66,7 @@
   <main>
     <section class="mx-auto " style="width: 700px;">
         <h1 class="fst-italic text-black text-center"> Crear Cobro</h1>
-      <form method="POST" action="Crear_cobro.php">
+      <form method="POST" action="Crear_Cobro.php">
 
 
         <input type='hidden' class='form-control' name='C_Referencia' value='<?php echo $_GET["Referencia"];?>'>
