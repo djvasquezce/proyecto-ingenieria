@@ -5,14 +5,14 @@ $database = "inmuebles";
 $username = "root";
 $password = "";
 // Create connection
-$Referencia = $_GET["Referencia"];
+$Cuenta = $_GET["Cuenta"];
 
 $conn = mysqli_connect($servername, $username, $password, $database);
-$consulta = Traer($conn, $Referencia);
+$consulta = Traer($conn, $Cuenta);
 
-function Traer($conn, $Referencia)
+function Traer($conn, $Cuenta)
 {
-    $consulta = "SELECT * FROM cobros WHERE Referencia = '$Referencia'";
+    $consulta = "SELECT * FROM cobros WHERE Cuenta = '$Cuenta'";
     $resultado = mysqli_query($conn, $consulta) or die(mysqli_error($conn));
     $filas = mysqli_fetch_assoc($resultado);
     return [
@@ -22,9 +22,16 @@ function Traer($conn, $Referencia)
         $filas['Cuenta'],
         $filas['Cobro']
     ];
+
 }
 
 $Formatos = explode(',', $consulta[4]);
+
+echo($consulta[0]);
+echo($consulta[1]);
+echo($consulta[2]);
+echo($consulta[3]);
+echo($consulta[4]);
 
 ?>
 
@@ -43,6 +50,7 @@ $Formatos = explode(',', $consulta[4]);
 </head>
 
 <body>
+   
     <header>
         <nav class="navbar navbar-expand-lg navbar-danger bg-danger">
             <div class="mx-auto" style="width: 300px;"></div>
@@ -76,6 +84,7 @@ $Formatos = explode(',', $consulta[4]);
                 <input type='hidden' class='form-control' name='C_Referencia' value='<?php echo $consulta[0]; ?>'>
                 <input type='hidden' class='form-control' name='C_Propietario' value='<?php echo $consulta[1]; ?>'>
                 <input type='hidden' class='form-control' name='C_Tipo' value='<?php echo $consulta[2]; ?>'>
+                <input type='hidden' class='form-control' name='C_Cuenta' value='<?php echo $consulta[3]?>'>
                 <!-- aaa -->
                 <div class="row mb-3">
                     <label for="String" class="col-sm-2 col-form-label">Propietario:</label>
@@ -90,9 +99,7 @@ $Formatos = explode(',', $consulta[4]);
 
                 <div class="row mb-3">
                     <label for="inputString" class="col-sm-2 col-form-label">Cuenta:</label>
-                    <div class="col-sm-10">
-                        <input type="number" class="form-control" name="C_Cuenta" value="<?php echo $consulta[3]?>">
-                    </div>
+                    <label for="String" class="col-sm-2 col-form-label"><?php echo $consulta[3] ?></label>
                 </div>
 
 

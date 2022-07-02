@@ -46,7 +46,7 @@
                 <th scope="col">Propietario</th>
                 <th scope="col">Tipo</th>
                 <th scope="col">Cuenta</th>
-                <th scope="col">Cobro</th>
+                <th scope="col">Cobro($)</th>
                 <th scope="col"></th>
                 <th scope="col"></th>
               </tr>
@@ -67,8 +67,8 @@
                 echo "<td>"; echo $filas['Tipo']; echo"</td>";
                 echo "<td>"; echo $filas['Cuenta']; echo"</td>";
                 echo "<td>"; echo $filas['Cobro']; echo"</td>";
-                echo "<td> <a href='VistaEditarCobro.php?Referencia=".$filas['Referencia']."'> <button type='button' class='btn btn-success'> Editar </button></a> </td>";
-                echo "<td> <a href='Eliminar_Cobro.php?Referencia=".$filas['Referencia']."'><button type='button' class='btn btn-danger'>Eliminar</button></a> </td>";
+                echo "<td> <a href='VistaEditarCobro.php?Cuenta=".$filas['Cuenta']."'> <button type='button' class='btn btn-success'> Editar </button></a> </td>";
+                echo "<td> <a href='Eliminar_Cobro.php?Cuenta=".$filas['Cuenta']."'><button type='button' class='btn btn-danger'>Eliminar</button></a> </td>";
                 echo "</tr>";
               }
               ?>

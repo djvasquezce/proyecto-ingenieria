@@ -6,9 +6,9 @@ $password = "";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 
-$Referencia = $_GET['Referencia'];
+$Cuenta = $_GET['Cuenta'];
 
-$consulta = "DELETE  FROM  cobros WHERE Referencia='" . $_GET['Referencia'] . "'";
+$consulta = "DELETE  FROM  cobros WHERE Cuenta='" . $_GET['Cuenta'] . "'";
 $resultado3 = mysqli_query($conn, $consulta)
 
 ?>
