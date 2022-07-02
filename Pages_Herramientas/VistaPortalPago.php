@@ -71,14 +71,15 @@ $Formatos = explode(',', $consulta[4]);
 
     <main>
         <section class="mx-auto " style="width: 700px;">
-            <h1 class=" fst-italic text-black text-center"> Editar Cobro</h1>
-            <form method="POST" action="Editar_Cobro.php">
+            <h1 class=" fst-italic text-black text-center"> Información de Pago</h1>
+            <form method="POST" action="Pagar_Admin.php">
 
 
                 <input type='hidden' class='form-control' name='C_Referencia' value='<?php echo $consulta[0]; ?>'>
                 <input type='hidden' class='form-control' name='C_Propietario' value='<?php echo $consulta[1]; ?>'>
                 <input type='hidden' class='form-control' name='C_Tipo' value='<?php echo $consulta[2]; ?>'>
                 <input type='hidden' class='form-control' name='C_Cuenta' value='<?php echo $consulta[3]?>'>
+                <input type='hidden' class='form-control' name='C_Cobro' value='<?php echo $consulta[4]?>'>
               
                 <div class="row mb-3">
                     <label for="String" class="col-sm-2 col-form-label">Propietario:</label>
@@ -99,13 +100,18 @@ $Formatos = explode(',', $consulta[4]);
 
                 <div class="row mb-3">
                     <label for="inputInteger" class="col-sm-2 col-form-label">Cobro</label>
-                    <div class="col-sm-10">
-                        <input type="number" class="form-control" name="C_Cobro" value="<?php echo $consulta[4]?>">
-                    </div>
+                   <label for="String" class="col-sm-2 col-form-label"><?php echo $consulta[4] ?></label>
                 </div>
                 
-
-                <button type="submit" class="btn btn-primary">Editar</button>
+                <div class="row mt-5">
+                    <label class="col-sm-5 col-form-label">Número Tarjeta Crédito o Débito</label>
+                    <div class="col-sm-7">
+                        <input type="number" class="form-control">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-success mt-5">Efectuar Pago</button>
+                </div>
             </form>
         </section>
 

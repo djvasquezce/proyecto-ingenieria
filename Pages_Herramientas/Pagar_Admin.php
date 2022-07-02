@@ -13,11 +13,12 @@ $Cuenta=$_POST['C_Cuenta'];
 $Cobro = $_POST['C_Cobro'];
 
 
-$consulta = "UPDATE cobros SET Referencia='$Referencia', Propietario='$Propietario', Tipo='$Tipo', Cobro='$Cobro' WHERE Cuenta='$Cuenta'";
+$consulta = "DELETE  FROM  cobros WHERE Cuenta='$Cuenta'";  
 $result= mysqli_query($conn, $consulta);
+
 
 ?>
 <Script type="text/javascript">
-    alert("Cobro editado exitosamente")
-    window.location.href="VistaMostrarCobro.php";
+    alert("Pago de Administración exitosamente")
+    window.location.href="VistaPagarAdmin.php";
 </Script>
