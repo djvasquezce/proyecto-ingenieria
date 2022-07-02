@@ -6,13 +6,18 @@ $password = "";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 
-$Referencia= $_POST['E_Referencia'];
-$Propietario = $_POST['E_Propietario'];
-$Direccion = $_POST['E_Direccion'];
-$Email=$_POST['E_Email'];
-$Tipo = $_POST['EgridRadios'];
+$Referencia= $_POST['C_Referencia'];
+$Propietario = $_POST['C_Propietario'];
+$Tipo = $_POST['C_Tipo'];
+$Cuenta=$_POST['C_Cuenta'];
+$Cobro = $_POST['C_Cobro'];
 
-$consulta = "UPDATE inmuebles SET Propietario='$Propietario', Direccion='$Direccion',Email='$Email', Tipo='$Tipo'  WHERE Referencia='$Referencia'";
-$resultado2= mysqli_query($conn, $consulta)
+$consulta = "UPDATE cobros SET Propietario='$Propietario', Tipo='$Tipo', Cuenta='$Cuenta', Cobro='$Cobro' WHERE Referencia='$Referencia'";
+$result= mysqli_query($conn, $consulta)
 
 ?>
+
+<Script type="text/javascript">
+    alert("Cobro editado exitosamente")
+    window.location.href="VistaMostrarCobro.php";
+</Script>

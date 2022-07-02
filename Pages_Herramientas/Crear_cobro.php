@@ -17,5 +17,5 @@ $servername = "localhost";
 ?>
 <Script type="text/javascript">
     alert("Se ha editado exitosamente")
-    window.location.href="Cobro_cobro.php";
+    window.location.href="VistaMostrarCobro.php";
 </Script>

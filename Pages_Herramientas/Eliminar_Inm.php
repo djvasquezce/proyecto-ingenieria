@@ -15,5 +15,5 @@ $servername = "localhost";
 
 <Script type="text/javascript">
     alert("El inmueble ha sido borrado Exitosamente");
-    window.location.href="Editar_P.php";
+    window.location.href="VistaMostrarInmueble.php";
 </Script>
