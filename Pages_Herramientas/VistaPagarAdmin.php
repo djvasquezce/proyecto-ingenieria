@@ -64,15 +64,17 @@ $idCuenta = -99;
         }
 
         ?>
-        <section class="mx-auto py-3" style="width: 750px;">
+        <section class="mx-auto p-3 bg-light border border-secondary rounded rounded-lg" style="width: 750px;">
             <h2 class="text-center fst-italic text-black text-cente">Referencia de inmueble a Pagar</h2>
             <form method="post">
 
-                <input type="number" name="inputCuenta" class="form-control"><br>
+                <input type="number" name="inputCuenta" class="form-control border border-dark"><br>
                 <input type="submit" name="submit" value="Buscar" class="btn btn-primary"><br>
 
             </form>
         </section>
+        <H1></H1>
+        
         <section class="mx-auto " style="width: 700px;">
             <h1 class="fst-italic text-black text-center"> Pagar Administración</h1>
         </section>

@@ -58,6 +58,7 @@
                         <th scope="col">Tipo</th>
                         <th scope="col">Cobro($)</th>
                         <th scope="col">Fecha</th>
+                        <th scope="col">Estado</th>
                     </tr>
                     <?php
                     $servername = "localhost";
@@ -82,6 +83,9 @@
                         echo "</td>";
                         echo "<td>";
                         echo $filas['Fecha'];
+                        echo "</td>";
+                        echo "<td>";
+                        echo $filas['Estado'];
                         echo "</td>";
                         echo "</tr>";
                     }

@@ -16,7 +16,8 @@ $Cobro = $_POST['C_Cobro'];
 $consulta = "DELETE  FROM  cobros WHERE Cuenta='$Cuenta'";  
 $result= mysqli_query($conn, $consulta);
 
-$consulta2 ="INSERT INTO movimientos(Cuenta,Tipo,Cobro,Fecha) VALUES('$Cuenta', '$Tipo', '$Cobro', NOW())";
+
+$consulta2 ="INSERT INTO movimientos(Cuenta,Tipo,Cobro,Fecha,Estado) VALUES('$Cuenta', '$Tipo', '$Cobro', NOW(), 'Pagado')";
 $resultado2= mysqli_query($conn, $consulta2) or die(mysqli_error($conn));
 
 
