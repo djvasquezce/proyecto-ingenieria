@@ -14,23 +14,34 @@ $idCuenta = -99;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 
-    <title> Crear Inmuebles</title>
+    <title>Pagar Admin</title>
 </head>
 
 <body>
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-danger bg-danger">
             <div class="mx-auto" style="width: 300px;"></div>
             <div class="container-fluid">
                 <img src="../images/mundo.gif" alt="Funny image" width="100" height="100">
+                <a class="navbar-brand fs-1 fst-italic"></a>
                 <ul class="navbar-nav">
                     <li class="nav-item fs-6 ms-3 rounded-pill bg-light "><a class="nav-link active text-black" aria-current="page" href="../index.html">Home</a></li>
-                    <li class="nav-item fs-6 ms-3 rounded-pill bg-light"><a class="nav-link active text-black" aria-current="page" href="../Pages_Principal/Movimientos.html">Movimientos</a></li>
-                    <li class="nav-item fs-6 ms-3 rounded-pill bg-light "><a class="nav-link active text-black" aria-current="page" href="../Pages_Principal/Crear_cobro.html">Crear cobro</a></li>
-                    <li class="nav-item fs-6 ms-3 rounded-pill bg-light"><a class="nav-link active text-black" aria-current="page" href="../Pages_Principal/Cuentas.html">Cuentas</a></li>
-                    <li class="nav-item dropdown  fs-6 ms-3 rounded-pill bg-light"><a class="nav-link dropdown-toggle fs-6 text-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Herramientas</a>
+                    <li class="nav-item fs-6 ms-3 rounded-pill bg-light"><a class="nav-link active text-black" aria-current="page" href="./VistaPagarAdmin.php">Pagar Administración</a></li>
+                    <li class="nav-item fs-6 ms-3 rounded-pill bg-light"><a class="nav-link active text-black" aria-current="page" href="./VistaMovimientos.php">Movimientos</a></li>
+
+                    <li class="nav-item dropdown  fs-6 ms-3 rounded-pill bg-light"><a class="nav-link dropdown-toggle fs-6 text-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrar Cobro</a>
                         <ul class="dropdown-menu  fs-6 ms-3 " aria-labelledby="navbarDropdown">
-                            <li class="nav-item fs-6"><a class="nav-link text-black" href="./Editar_P.php">Editar</a></li>
+                            <li class="nav-item fs-6"><a class="nav-link text-black" href="./VistaMostrarCobro.php">Cobros</a></li>
+                            <li class="nav-item fs-6"><a class="nav-link text-black" href="./VistaInmuebleCobro.php">Crear Cobro</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown  fs-6 ms-3 rounded-pill bg-light"><a class="nav-link dropdown-toggle fs-6 text-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrar Inmueble</a>
+                        <ul class="dropdown-menu  fs-6 ms-3 " aria-labelledby="navbarDropdown">
+                            <li class="nav-item fs-6"><a class="nav-link text-black" href="./VistaMostrarInmueble.php">Inmuebles</a></li>
+                            <li class="nav-item fs-6"><a class="nav-link text-black" href="./VistaCrearInmueble.php">Crear Inmueble</a></li>
+
                         </ul>
                     </li>
                 </ul>

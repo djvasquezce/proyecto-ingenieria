@@ -22,7 +22,6 @@ function Traer($conn, $Cuenta)
         $filas['Cuenta'],
         $filas['Cobro']
     ];
-
 }
 
 $Formatos = explode(',', $consulta[4]);
@@ -40,24 +39,34 @@ $Formatos = explode(',', $consulta[4]);
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title> Crear Inmuebles</title>
+    <title> Editar Cobro</title>
 </head>
 
 <body>
-   
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-danger bg-danger">
             <div class="mx-auto" style="width: 300px;"></div>
             <div class="container-fluid">
                 <img src="../images/mundo.gif" alt="Funny image" width="100" height="100">
+                <a class="navbar-brand fs-1 fst-italic"></a>
                 <ul class="navbar-nav">
                     <li class="nav-item fs-6 ms-3 rounded-pill bg-light "><a class="nav-link active text-black" aria-current="page" href="../index.html">Home</a></li>
-                    <li class="nav-item fs-6 ms-3 rounded-pill bg-light"><a class="nav-link active text-black" aria-current="page" href="../Pages_Principal/Movimientos.html">Movimientos</a></li>
-                    <li class="nav-item fs-6 ms-3 rounded-pill bg-light "><a class="nav-link active text-black" aria-current="page" href="../Pages_Principal/Crear_cobro.html">Crear cobro</a></li>
-                    <li class="nav-item fs-6 ms-3 rounded-pill bg-light"><a class="nav-link active text-black" aria-current="page" href="../Pages_Principal/Cuentas.html">Cuentas</a></li>
-                    <li class="nav-item dropdown  fs-6 ms-3 rounded-pill bg-light"><a class="nav-link dropdown-toggle fs-6 text-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Herramientas</a>
+                    <li class="nav-item fs-6 ms-3 rounded-pill bg-light"><a class="nav-link active text-black" aria-current="page" href="./VistaPagarAdmin.php">Pagar Administración</a></li>
+                    <li class="nav-item fs-6 ms-3 rounded-pill bg-light"><a class="nav-link active text-black" aria-current="page" href="./VistaMovimientos.php">Movimientos</a></li>
+
+                    <li class="nav-item dropdown  fs-6 ms-3 rounded-pill bg-light"><a class="nav-link dropdown-toggle fs-6 text-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrar Cobro</a>
                         <ul class="dropdown-menu  fs-6 ms-3 " aria-labelledby="navbarDropdown">
-                            <li class="nav-item fs-6"><a class="nav-link text-black" href="./Editar_P.php">Editar</a></li>
+                            <li class="nav-item fs-6"><a class="nav-link text-black" href="./VistaMostrarCobro.php">Cobros</a></li>
+                            <li class="nav-item fs-6"><a class="nav-link text-black" href="./VistaInmuebleCobro.php">Crear Cobro</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown  fs-6 ms-3 rounded-pill bg-light"><a class="nav-link dropdown-toggle fs-6 text-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrar Inmueble</a>
+                        <ul class="dropdown-menu  fs-6 ms-3 " aria-labelledby="navbarDropdown">
+                            <li class="nav-item fs-6"><a class="nav-link text-black" href="./VistaMostrarInmueble.php">Inmuebles</a></li>
+                            <li class="nav-item fs-6"><a class="nav-link text-black" href="./VistaCrearInmueble.php">Crear Inmueble</a></li>
+
                         </ul>
                     </li>
                 </ul>
@@ -78,8 +87,8 @@ $Formatos = explode(',', $consulta[4]);
                 <input type='hidden' class='form-control' name='C_Referencia' value='<?php echo $consulta[0]; ?>'>
                 <input type='hidden' class='form-control' name='C_Propietario' value='<?php echo $consulta[1]; ?>'>
                 <input type='hidden' class='form-control' name='C_Tipo' value='<?php echo $consulta[2]; ?>'>
-                <input type='hidden' class='form-control' name='C_Cuenta' value='<?php echo $consulta[3]?>'>
-              
+                <input type='hidden' class='form-control' name='C_Cuenta' value='<?php echo $consulta[3] ?>'>
+
                 <div class="row mb-3">
                     <label for="String" class="col-sm-2 col-form-label">Propietario:</label>
                     <label for="String" class="col-sm-2 col-form-label"><?php echo $consulta[1] ?></label>
@@ -100,10 +109,10 @@ $Formatos = explode(',', $consulta[4]);
                 <div class="row mb-3">
                     <label for="inputInteger" class="col-sm-2 col-form-label">Cobro</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" name="C_Cobro" value="<?php echo $consulta[4]?>">
+                        <input type="number" class="form-control" name="C_Cobro" value="<?php echo $consulta[4] ?>">
                     </div>
                 </div>
-                
+
 
                 <button type="submit" class="btn btn-primary">Editar</button>
             </form>
