@@ -13,7 +13,8 @@ $servername = "localhost";
     $Cobro = $_POST['C_Cobro'];
 
     $consulta = "INSERT  INTO cobros(Referencia,Propietario,Tipo,Cuenta,Cobro) VALUES('$Referencia','$Propietario','$Tipo','$Cuenta','$Cobro')";
-    $resultado= mysqli_query($conn, $consulta) or die(mysqli_error($conn))
+    $resultado= mysqli_query($conn, $consulta) or die(mysqli_error($conn));
+
 ?>
 <Script type="text/javascript">
     alert("Se ha editado exitosamente")

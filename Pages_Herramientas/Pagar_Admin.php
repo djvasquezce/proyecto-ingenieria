@@ -16,9 +16,12 @@ $Cobro = $_POST['C_Cobro'];
 $consulta = "DELETE  FROM  cobros WHERE Cuenta='$Cuenta'";  
 $result= mysqli_query($conn, $consulta);
 
+$consulta2 ="INSERT INTO movimientos(Cuenta,Tipo,Cobro,Fecha) VALUES('$Cuenta', '$Tipo', '$Cobro', NOW())";
+$resultado2= mysqli_query($conn, $consulta2) or die(mysqli_error($conn));
+
 
 ?>
 <Script type="text/javascript">
-    alert("Pago de Administración exitosamente")
+    alert("Pago de Administración Exitoso")
     window.location.href="VistaPagarAdmin.php";
 </Script>
