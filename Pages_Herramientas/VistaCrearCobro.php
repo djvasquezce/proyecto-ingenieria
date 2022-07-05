@@ -116,6 +116,54 @@ $Tipo = $consulta[4];
       </form>
     </section>
 
+
+    <H1></H1>
+    <H1></H1>
+
+    <section class="mx-auto " style="width: 750px;">
+      <table class="table border border-4 border-dark">
+        <thead>
+          <tr>
+            <th scope="col">Referencia</th>
+            <th scope="col">Propietario</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Cuenta</th>
+            <th scope="col">Cobro($)</th>
+
+          </tr>
+          <?php
+          $servername = "localhost";
+          $database = "inmuebles";
+          $username = "root";
+          $password = "";
+          // Create connection
+          $conn = mysqli_connect($servername, $username, $password, $database);
+          $consulta = "SELECT * FROM cobros";
+          $resultado = mysqli_query($conn, $consulta) or die(mysqli_error($conn));
+          while ($filas = mysqli_fetch_array($resultado)) {
+            echo "<tr>";
+            echo "<td>";
+            echo $filas['Referencia'];
+            echo "</td>";
+            echo "<td>";
+            echo $filas['Propietario'];
+            echo "</td>";
+            echo "<td>";
+            echo $filas['Tipo'];
+            echo "</td>";
+            echo "<td>";
+            echo $filas['Cuenta'];
+            echo "</td>";
+            echo "<td>";
+            echo $filas['Cobro'];
+            echo "</td>";
+            echo "</tr>";
+          }
+
+          ?>
+        </thead>
+      </table>
+    </section>
   </main>
 
 

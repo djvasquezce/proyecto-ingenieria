@@ -47,7 +47,7 @@
   <H1></H1>
   <main>
     <section class="mx-auto " style="width: 700px;">
-      <h1 class=" fst-italic text-black text-center"> Editar Inmueble</h1>
+      <h1 class=" fst-italic text-black text-center">Todos los Inmuebles</h1>
     </section>
 
     <section class="mx-auto " style="width: 750px;">

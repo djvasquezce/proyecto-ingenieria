@@ -79,7 +79,7 @@ $Formatos = explode(',', $consulta[4]);
 
   <main>
     <section class="mx-auto " style="width: 700px;">
-      <h1 class=" fst-italic text-black text-center"> Crear inmueble</h1>
+      <h1 class=" fst-italic text-black text-center"> Editar inmueble</h1>
       <form method="POST" action="Editar_Inm.php">
 
 
